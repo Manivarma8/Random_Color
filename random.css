@@ -1,0 +1,43 @@
+body{
+    background: linear-gradient(135deg,rgb(155, 204, 155), black);
+    height : 500vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.sub_boxes1, .sub_boxes2, .sub_boxes3,.sub_boxes4
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ 
+ .sub_box2, .sub_box3,.sub_box1, .sub_box4
+ {  
+    position: relative; 
+    width: 250px;
+    height : 150px;
+    border-radius: 1px solid black;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 40px;
+   
+ }
+ 
+ .box{
+    color : #800080
+ }
+
+ span{
+    position: absolute;
+    bottom: 40%;
+    right : 40%;
+    font-weight: bold;
+    color : white;
+ }
+
+ .deactive
+ {
+    display : none;
+ }
