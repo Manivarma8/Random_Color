@@ -1,42 +1,40 @@
-// var boxes = document.querySelectorAll(".boxer1");
-// const elementsArray = Array.from(boxes);
-// elementsArray.Map(element => {
-// alert("hi")
-// })
+let container = document.querySelector('.container');
+
+for(let i = 0; i < 30; i++){
+    let el = document.createElement('div');
+    el.classList.add('box')
+    
+    container.appendChild(el)
+}
+const rams = document.querySelectorAll('.box')
+console.log(rams);
 
 
-const vijay = [
-    {id : 1, name : 'Manivarman', age : 27},
-    {id : 2, name : "Vijay", age : 27},
-    {id : 3, name : "Surendran", age : 67},
-    {id : 4, name : "Bhuvaneswari", age : 58}
-];
-
-const mani = vijay.map(record=> {
-    record.name 
-})
-console.log(mani);
+Generate();
+function Generate(){
+    rams.forEach((ram)=>{
+const randoms = Random();
+ram.style.backgroundColor = "#" + randoms;
+ram.textContent = "#" + randoms
+console.log(randoms);
+    })
+}
 
 
+function Random(){
+    const randoms = "0123456789abcdefg"
+    let colors = ""
+    const limit = 6;
+    for(let m = 0; m < limit; m++){
+ 
+        const r1 = Math.floor(Math.random() * randoms.length)
+     
+        colors += randoms.substring(r1, r1 + 1)
+        
 
-const users = [
-    { id: 1, name: 'Alice', age: 28, isActive: true },
-    { id: 2, name: 'Bob', age: 34, isActive: false },
-    { id: 3, name: 'Charlie', age: 22, isActive: true },
-    { id: 4, name: 'Dave', age: 45, isActive: false }
-];
+    }
+    return colors
+}
 
-// Use filter to get all active users
+Random()
 
-const activeUserNames = users.map(user => user.name);
-
-console.log('Active User Names:', activeUserNames);
-// Output: Active User Names: ['Alice', 'Charlie']
-
-// Use forEach to log the name of each active user
-activeUserNames.forEach(name => {
-    console.log(name);
-});
-// Output:
-// Alice
-// Charlie
